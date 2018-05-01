@@ -2,7 +2,7 @@
  *
  * \section intro Úvod
  *
- * Vítejne na hlavní stránce programové dokumentace jednoduchého programu na analýzu četnosti znaků v textu. 
+ * Vítejte na hlavní stránce programové dokumentace jednoduchého programu na analýzu četnosti znaků v textu.
  *
  * \section motiv K čemu mi to může být?
  *
@@ -35,10 +35,39 @@
 #include <stdlib.h>
 #include <conio.h>
 #include <stdbool.h>
+#include <string.h>
 
 #include "array.h"
 
 typedef enum{MOSTFREQUENT, LEASTFREQUENT, SUM, AVERAGE, PRINTALL, NEWINPUT, ENDPROGRAM}Function_t;
+
+
+/*!
+ * \brief Funkcia slúži k overeniu, či bol zadaný správny formát vstupného súboru
+ * \param string[], názov cesty k súboru zadanej ako parameter príkazovej riadky
+ * \return Vracia true alebo false podľa toho, či je zadaný vstup textovým súborom, alebo nie
+ */
+bool textfile(char string[]){
+
+    char suffix[3] = {0};
+    char cmp[3] = "txt";
+
+    int j = 0;
+    if(strlen(string) < 5){
+        return false;
+    }
+    for(unsigned int i = strlen(string)-3; i < strlen(string); i++){
+        suffix[j] = string[i];
+        j++;
+    }
+
+    for(unsigned int k =0; k < 3; k++){
+        if(suffix[k] != cmp[k]){
+            return false;
+        }
+    }
+    return true;
+}
 
 /*!
  * \brief Vypíše menu popisujúce funkcionalitu programu
@@ -110,6 +139,10 @@ int main(int argc, char** argv)
     FILE *input = stdin;
     if(argc == 2){
         input = fopen(argv[1], "r");
+        if(!textfile(argv[1])){
+            printf("Nespravny format suboru\n");
+            input = NULL;
+        }
     }
     if(input == NULL){
         printf( "Input soubor se nepodarilo otevrit\n" );
