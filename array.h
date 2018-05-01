@@ -1,3 +1,19 @@
+/**
+ * \file array.h
+ * \brief Hlavičkový soubor k souboru array.c
+ * \author Jozef Kováč, Romana Stopková, Daniel Vaškovič, Luboš Perna
+ * \date Duben 2018
+ * \details soubor array.c s následujícími vlastnostmi
+ *   - parseInput pro zpracování textu
+ *   - printArray pro výpis pole
+ *   - averageCount pro průměrnou četnost znaku
+ *   - mostFrequent pro nejčastější znak
+ *   - leastFrequent pro nejméně častý znak
+ *   - charTotal pro celkový počet znaků
+ * 
+ * Zdrojové kódy jsou zapsány ve znakové sadě UTF-8
+*/
+
 #include <stdio.h>
 #include <ctype.h>
 #include <limits.h>

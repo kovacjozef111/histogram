@@ -1,3 +1,36 @@
+/*! \mainpage Programová dokumentace
+ *
+ * \section intro Úvod
+ *
+ * Vítejne na hlavní stránce programové dokumentace jednoduchého programu na analýzu četnosti znaků v textu. 
+ *
+ * \section motiv K čemu mi to může být?
+ *
+ *	Tento program zvládne zanalyzovat velké množství textu jak ze souboru tak i z přímého vstupu. 
+ *	Četnost znaků může být potřeba například při psaní bakalářských a diplomových prací, v
+ *	některém případě i u prací seminárních. 
+ * 
+ */
+
+/**
+ * \file main.c
+ * \brief soubor main obsluhující výpis na konzoli a cyklus obsluhující chod programu
+ * \author Jozef Kováč, Romana Stopková, Daniel Vaškovič, Luboš Perna
+ * \date Duben 2018
+ * \details Konzolová aplikace s následujícími vlastnostmi
+ *   - Uživatel může zadat text ze vstupu nebo ze souboru
+ *   - Uživatel má k dispozici tyto funkce
+ *   	+ Informace o nejčastějším znaku
+ *   	+ Informace o nejméně používaném znaku
+ *		+ Výpis celkového počtu znaků
+ *		+ Výpis průměrné četnosti znaků
+ *		+ Výpis četnosti každého abecedního znaku
+ *   - Zadávání nových dat z konzole (Klávesa Space)
+ *   - Ukončení programu (Klávesa Enter)
+ * 
+ * Zdrojové kódy jsou zapsány ve znakové sadě UTF-8
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <conio.h>
