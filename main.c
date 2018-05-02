@@ -140,12 +140,12 @@ int main(int argc, char** argv)
     if(argc == 2){
         input = fopen(argv[1], "r");
         if(!textfile(argv[1])){
-            printf("Nespravny format suboru\n");
-            input = NULL;
+            printf("Nespravny format suboru, program bude ukonceny\n");
+            return -1;
         }
     }
     if(input == NULL){
-        printf( "Input soubor se nepodarilo otevrit\n" );
+        printf( "Chyba pri otvarani suboru, program bude ukonceny\n" );
         return -1;
         }
 
