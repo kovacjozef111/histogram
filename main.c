@@ -119,7 +119,7 @@ Function_t functionChoice(){
             return ENDPROGRAM;
         }
         else{
-            printf("Nevalidny vstup, zadaj 1, 2, 3, 4, 5, alebo Enter \n");
+            printf("Nevalidny vstup, zadaj 1, 2, 3, 4, 5, Mezernik alebo Enter \n");
         }
     }
 }
